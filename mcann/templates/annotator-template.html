@@ -1,0 +1,119 @@
+{% extends 'base_headonly.html' %}
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/template.css">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/annotator.min.css">
+{% endblock %}
+{% block extrajs %}
+    {% if is_auth %}
+        <script language="javascript" type="text/javascript">
+            console.log("this is a authenticated user");
+        </script>
+    {% else %}
+        <script language="javascript" type="text/javascript">
+            console.log("this is a not authenticated user");
+        </script>
+    {% endif %}
+    <script src="{{ STATIC_URL }}js/json2.js"></script>
+    <script src="{{ STATIC_URL }}js/annotator-full.min.js"></script>
+    <script src="{{ STATIC_URL }}js/showdown.js"></script>
+{% endblock %}
+
+{% block main %}
+<div id="template" class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <h1>Sections</h1>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li>Four</li>
+                <li>One</li>
+                <li>Five</li>
+            </ul>
+            <div>Annotations</div>
+            <div>Commentary</div>
+        </div>
+        <div class="span6">
+            <h1>FOUNDRY VENTURE CAPITAL 2011, L.P.</h1>
+            <h2>Terms for Proposed Private Placement of Series A Preferrred Stock of Company Date</h2>
+            <div>
+                <p>(Valid for accptance until Expiration Date)</p>
+                <p><b>Issuer:</b> Comapny, a Delaware corporation (the "<b>Company</b>")</p>
+                <p><b>Amount of Financing:</b> $Financing Amount millon, [(including $Converted Amount from the conversion of bridge notes)] representing a VC Stake% post-closing wonership stake on a fully diluted basis, including shares reserved and unissued for the employee option pool(the "<b>Employee Pool</b>"). The Employee Pool shall be equal to Pool Size% of the post-closing fully diluted capitalization.</p>
+                <p><b>Investor[s]:</b> Foundry Venture Capital 2011, L.P.("<b>Foundry</b>")$Foundry Investment</p>
+                <p><center>Other Investor $Other Investment</center></p>
+                <p><b>[Note: if there is to be a second closing, differentiate the investors and amounts by each closing.]</b></p>
+                <p><b>Total</b> (all investors together, the "<b>Investors</b>"):$Investment Sum</p>
+                <p><b>Closing:</b> Sale of the Series A Preferred (the <b>Closing</b>) is anticipated to take</p>
+            </div>
+        </div>
+        <div class="span3">
+            <h1>Additional Information</h1>
+            <ul>
+                <li>Purpose of Agreement</li>
+                <li>Buyer Provisions</li>
+                <li>Seller Provisions</li>
+                <li>Neutral Provisions</li>
+                <li>Statutory Authority</li>
+                <li>Case Law</li>
+                <li>Similar Agreements</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+        jQuery(function ($) {
+            if (typeof $.fn.annotator !== 'function') {
+                alert("Ooops! it looks like you haven't built the Annotator concatenation file. " +
+                        "Either download a tagged release from GitHub, or modify the Cakefile to point " +
+                        "at your copy of the YUI compressor and run `cake package`.");
+            } else {
+                // This is the important bit: how to create the annotator and add
+                // plugins
+                $('#template').annotator()
+                        .annotator('addPlugin', 'Permissions', 'Permissions', {
+                            user: { id: 6, name:'Alice', group: 'user' },
+                            // Either Alice or the group admin can perform actions on these annotations.
+                            permissions: {
+                                'read':   [6, 'group:Admin'],
+                                'update': [6, 'group:Admin'],
+                                'delete': [6, 'group:Admin'],
+                                'admin':  [6, 'group:Admin']
+                            },
+                            userAuthorize: function (user, token) {
+                                // If the token is our admin token and the user
+                                // is in the admin group then authorise.
+                                if (token === 'group:Admin' && user.group === 'Admin') {
+                                    return true;
+                                }
+                                // If it's not an admin token check the id.
+                                return user.id === token;
+                            }
+                        })
+                        //.annotator('addPlugin', 'Markdown')
+                        .annotator('addPlugin', 'Tags')
+                        .annotator('addPlugin', 'Store', {
+                    prefix: '{{ SUB_URL }}/storage',
+                    showViewPermissionsCheckbox: false,
+                    showEditPermissionsCheckbox: false,
+                    annotationData: {
+                        'uri': '{{ currentUrl }}'
+                    },
+                    loadFromSearch: {
+                        'limit': 20,
+                        'uri': '{{ currentUrl }}'
+                    },
+                    urls: {
+                        create: '/create',
+                        read: '/read/:id',
+                        update: '/update/:id',
+                        destroy: '/destroy/:id',
+                        search: '/search'
+                    }
+                })
+                //$('#template').data('annotator').plugins['Permissions'].setUser("Joe Bloggs");
+            }
+        });
+    </script>
+{% endblock %}

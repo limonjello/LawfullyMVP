@@ -1,0 +1,273 @@
+﻿{% extends 'base.html' %}
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/animate.css">
+{% endblock %}
+{% block main %}
+    <div id="hero">
+        <div class="container">
+            <!-- starts carousel -->
+            <div class="row animated fadeInDown">
+                <div class="span12">
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- carousel items -->
+                        <div class="carousel-inner">
+                            <!-- slide -->
+                            <div class="active item slide1">
+                                <div class="row">
+                                    <div class="span6">
+                                        <img src="{{ STATIC_URL }}img/slide1.png" alt="slide1" />
+                                    </div>
+                                    <div class="span4">
+                                        <h1> Your Source for Annotated, Explained Legal Documents
+										and Terms </h1>
+										<p> By using annotations, we believe that the community
+										can provide quick, understandable explanations of key
+										legal terms and coverage of the key legal issues with
+										any document, statute, case, etc.  </p>
+									  <a href="signup.html" class="btn btn-success btn-large">
+										Join Lawful.ly Now! </a> 
+									</div>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <div class="item slide2">
+                                <div class="row">
+                                    <div class="span4 animated fadeInUpBig">
+                                        <h1>An Open Community for Legal Information</h1>
+										  <p> We hope that you will give as much as you
+						  take from Lawful.ly.  We believe that it's not only lawyers
+						  who have valuable information to share about legal documents and
+						  terms.  In fact, those who have been involved in the legal
+						  transactions before may have even better insights or be able to
+						  better explain the "real world" meanings of particular legal terms
+						  or issues.  While we we intend this to be a community with
+						  plenty of lawyers, we don't believe the law belongs exclusively to
+						  the lawyers.</p>
+										  <a href="blog.html" class="btn btn-success btn-large">
+											Watch more about Lawful.ly now! </a> 
+									</div>
+                                    
+                                    <div class="span6 animated fadeInDownBig">
+                                        <img src="{{ STATIC_URL }}img/slide2.png" alt="slide2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide -->
+                            <!-- <div class="item slide3 animated fadeInUpBig">
+                                <img src="{{ STATIC_URL }}img/slide3.png" alt="slide3" />
+                            </div> -->
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="intro">
+        <div class="container">
+            <h1>Lawful.ly is your source for what you want to know about the law, in
+          language that's right for you.</h1>
+        </div>
+    </div>
+
+    <!-- features -->
+    <div id="features">
+        <div class="container">
+            <!-- header -->
+            <h2 class="section_header">
+                <hr class="left visible-desktop">
+                <span>What is Lawful.ly?</span>
+                <hr class="right visible-desktop">
+            </h2>
+
+            <!-- feature list -->
+            <div class="row">
+                <div class="span4 feature">
+                    <img src="{{ STATIC_URL }}img/feature1.jpg" alt="feature1" class="thumb" />
+                    <h3> Your source for plain language, annotated standard legal
+						documents  </h3>
+						<p class="description"> When you have a basic question or legal
+						  need, you don't want to read a legal treatise or even a legal blog
+						  if you don't absolutely have to.  Well, neither do we. 
+						  By using annotations, we believe that the community can provide
+						  quick explanations of key terms and overview of the key issues
+						  with any document, statute, case, etc.  </p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+                <div class="span4 feature">
+                    <img src="{{ STATIC_URL }}img/feature2.jpg" alt="feature2" class="thumb" />
+                    <h3> An open community for sharing legal information </h3>
+						<p class="description"> We hope that you will give as much as you
+						  take from Lawful.ly.  We believe that it's not only lawyers
+						  who have valuable information to share about legal documents and
+						  terms.  In fact, those who have been involved in the legal
+						  transactions before may have even better insights or be able to
+						  better explain the "real world" meanings of particular legal terms
+						  or issues.  While we we intend this to be a community with
+						  plenty of lawyers, we don't believe the law belongs exclusively to
+						  the lawyers.</p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+                <div class="span4 feature">
+                    <img src="{{ STATIC_URL }}img/feature3.jpg" alt="feature3" class="thumb" />
+                    <h3> Your source for legal <em> information</em>, but not legal <em>advice</em>.</h3>
+						<p class="description"> We hate to get all "lawyerly" here, but we
+						  do want to be clear that Lawful.ly's goal is to empower you with
+						  information about the law, not provide you with tailored legal
+						  advice.  Your specific issues may still require the services
+						  of a qualified attorney.  However, by providing you with
+						  information about the law, we hope to make your interactions with
+						  your attorney more efficient (read: cheaper).</p>
+                    <a href="#" class="btn btn-default">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- starts pricing
+    <div id="pricing">
+        <div class="container">
+            <!-- header -->
+            <!--<h2 class="section_header">
+                <hr class="left visible-desktop">
+                <span>
+                    Pricing 
+                    <small>
+                        See all plan details here</small>
+                </span>
+                <hr class="right visible-desktop">
+            </h2>  -->
+
+            <!-- pricing charts -->
+            <!--<div class="row">
+                <div class="span4">
+                    <div class="price_wrapper lite regular">
+                        <div class="header">
+                            <span>Lite</span>
+                            <div class="price">
+                                <span>$ 35</span>
+                                Per Month
+                            </div>
+                        </div>
+                        <div class="section">
+                            <h3>Passages of Lorem randomised
+                                words which look slightly.</h3>
+                            <ul class="perks">
+                                <li>
+                                    <i class="i_shuffle"></i>
+                                    Cross-browser
+                                </li>
+                                <li>
+                                    <i class="i_loading"></i>
+                                    Fast-loading
+                                </li>
+                            </ul>
+                            <a href="#" class="btn">Order now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="price_wrapper pro">
+                        <div class="header">
+                            <span>Pro</span>
+                            <div class="price">
+                                <span>$ 99</span>
+                                Per Month
+                            </div>
+                        </div>
+                        <div class="section">
+                            <h3>Passages of Lorem randomised
+                                words which look slightly.</h3>
+                            <ul class="perks">
+                                <li>
+                                    <i class="i_shuffle"></i>
+                                    Cross-browser
+                                </li>
+                                <li>
+                                    <i class="i_loading"></i>
+                                    Fast-loading
+                                </li>
+                                <li>
+                                    <i class="i_bookmark"></i>
+                                    Bookmarkable URLs
+                                </li>
+                                <li>
+                                    <i class="i_bars"></i>
+                                    W3C Standards
+                                </li>
+                            </ul>
+                            <a href="#" class="btn">Order now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <div class="price_wrapper standard regular">
+                        <div class="header">
+                            <span>Standard</span>
+                            <div class="price">
+                                <span>$ 65</span>
+                                Per Month
+                            </div>
+                        </div>
+                        <div class="section">
+                            <h3>Passages of Lorem randomised
+                                words which look slightly.</h3>
+                            <ul class="perks">
+                                <li>
+                                    <i class="i_shuffle"></i>
+                                    Cross-browser
+                                </li>
+                                <li>
+                                    <i class="i_loading"></i>
+                                    Fast-loading
+                                </li>
+                                <li>
+                                    <i class="i_bookmark"></i>
+                                    Bookmarkable URLs
+                                </li>
+                            </ul>
+                            <a href="#" class="btn">Order now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- starts testimonial -->
+    <div id="testimonials">
+        <div class="container">
+            <div class="controls">
+                <hr>
+            </div>
+            <div class="phrases_wrapper">
+                <div class="phrase">
+                    <div class="row">
+                        <div class="span8">
+                            <p class="testimony"> <strong>Disclaimer - Legal Information Is
+                    Not Legal Advice</strong></p>
+                <p class="testimony"><br>
+                  This site provides information about the law designed to help
+                  learn about their potential legal needs. However, legal
+                  information is <strong>not </strong>the same as legal advice
+                  -- the application of law to an individual's specific
+                  circumstances. We recommend you consult a lawyer if you want
+                  professional assurance that any information, and your
+                  interpretation of it, is appropriate to your particular
+                  situation.</p>
+                        </div>
+                        <!--<div class="span3 offset1">
+                            <div class="pic">
+                                <img src="{{ STATIC_URL }}img/pic1.jpg" alt="author" class="img-circle" />
+                                <span class="name">Alejandra Galvan Castillo</span>
+                                <span class="position">Bootstrap wizard</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

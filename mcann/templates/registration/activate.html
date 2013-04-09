@@ -1,0 +1,20 @@
+{% extends "registration/registration_base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css">
+{% endblock %}
+
+{% block masthead %}
+<h2 class="section_header">
+    <hr class="left visible-desktop">
+    <span>Activation failure</span>
+    <hr class="right visible-desktop">
+</h2>
+{% endblock %}
+
+{% block content %}
+<p>We are sorry but something went wrong!</p>
+<p>The activation link you provided is broken or was already used.</p>
+{% endblock %}

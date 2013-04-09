@@ -1,0 +1,20 @@
+{% extends "registration/registration_base.html" %}
+{% load url from future %}
+{% load i18n %}
+
+{% block masthead %}
+<h2 class="section_header">
+    <hr class="left visible-desktop">
+    <span>Activation complete</span>
+    <hr class="right visible-desktop">
+</h2>
+{% endblock %}
+
+{% block content %}
+<p>You may now login with your username and password.</p>
+{% if not user.is_authenticated %}
+    <a href="{% url "auth_login" %}" class="btn">Login now</a>
+{% else %}
+    <a href="/" class="btn">Home</a>
+{% endif %}
+{% endblock %}

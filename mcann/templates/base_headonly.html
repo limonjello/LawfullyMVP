@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lawful.ly</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/theme.css">
+    {% block extracss %}{% endblock extracss %}
+    <!--link rel='stylesheet' type='text/css' href='{{ STATIC_URL }}css/fontsgoogleapis.css' -->
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script src="{{ STATIC_URL }}js/theme.js"></script>
+    {% block extrajs %}
+    {% endblock extrajs %}
+</head>
+<body>
+    <a href="#" class="scrolltop">
+        <span>up</span>
+    </a>
+    <!-- begins navbar -->
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+    		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+          	</a>
+            {% if ishomepage %}
+          	<a class="brand scroller" data-section="body">
+                <img src="{{ STATIC_URL }}img/logo.png" alt="logo" />
+            </a>
+            {% else %}
+                <a href="{{ SUB_URL }}/ann/" class="brand scroller">
+                    <img src="{{ STATIC_URL }}img/logo.png" alt="logo" />
+                </a>
+            {% endif %}
+		  	<div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    {% if ishomepage %}
+                        <li><a href="#" class="scroller" data-section="#features">Our Mission</a></li>
+                        <li><a href="#" class="scroller" data-section="#pricing">Our Team</a></li>
+                        <li><a href="#" class="scroller" data-section="#footer">Our Blog</a></li>
+                    {% else %}
+                        <li><a href="{{ SUB_URL }}/ann/features" class="scroller">Our Mission</a></li>
+                        <li><a href="{{ SUB_URL }}/ann/aboutus" class="scroller">Our Team</a></li>
+                        <li><a href="{{ SUB_URL }}/ann/contact" class="scroller">Contact Us</a></li>
+                    {% endif %}
+                    <li><a href="{{ SUB_URL }}/ann/blog">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            More
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- <li><a href="{{ SUB_URL }}/ann/features">Our Mission</a></li> -->
+                            <!-- <li><a href="{{ SUB_URL }}/ann/pricing">Pricing</a></li> -->
+                            <li><a href="{{ SUB_URL }}/ann/terms">Terms of Use</a></li>
+                            <!-- <li><a href="{{ SUB_URL }}/ann/coming-soon">Coming Soon</a></li> -->
+                            <li><a href="{{ SUB_URL }}/ann/aboutus">About Us</a></li>
+                            <li><a href="{{ SUB_URL }}/ann/contact">Contact Us</a></li>
+                            <li><a href="{{ SUB_URL }}/ann/faql">FAQ</a></li>
+                            <li><a href="{{ SUB_URL }}/ann/template">The Documents</a></li>
+                        </ul>
+                    </li>
+                {% if user.is_authenticated %}
+                    <li>
+                        <a class="btn-header" href="{{ SUB_URL }}/ann/profile/">Profile</a>
+                    </li>
+                    <li>
+                        <a class="btn-header" href="{{ SUB_URL }}/accounts/logout/">Sign out</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a class="btn-header" href="{{ SUB_URL }}/accounts/register/">Sign up</a>
+                    </li>
+                    <li>
+                        <a class="btn-header" href="{{ SUB_URL }}/accounts/login/">Sign in</a>
+                    </li>
+                {% endif %}
+                </ul>
+	        </div>
+        </div>
+      </div>
+    </div>
+    <!-- ends navbar -->
+    {% block main %}
+    {% endblock main %}
+
+    <!-- starts footer -->
+    {% block footer %}
+    {% endblock footer %}
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% extends 'base_headonly.html' %}
+{% block footer %}
+    <!-- starts footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    <h3>From the Blog</h3>
+                    <div class="blog_post">
+                        <div class="row">
+                            <div class="span2">
+                                <a href="blog.html">
+                                    <img src="{{ STATIC_URL }}img/pic_blog.png" alt="post image" class="img-circle" />
+                                </a>
+                            </div>
+                            <div class="span4">
+                                <a href="blog.html" class="title">
+                                    Lorem Ipsum is simply dummy 
+                                </a>
+                                <div class="intro">
+                                    There are many variations of passages of Lorem alteration in some form by injected look even slightly believable.
+                                </div>
+                                <div class="date">
+                                    Oct 22. 2012
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			   <div class="span4 contact_us">
+				<h3>Contact Us</h3>
+				<form class="form-horizontal">
+				  <div class="field">
+					<div class="label_field"> <label for="inputName">Name</label> 
+					</div>
+					<input id="inputName" type="text"> 
+				  </div>
+				  <div class="field">
+					<div class="label_field"> <label for="inputEmail">Email</label>
+					</div>
+					<input id="inputEmail" type="text"> 
+				  </div>
+				  <!-- <div class="field">
+					<div class="label_field"> <label for="inputCity">City</label> </div>                     <input id="inputCity" type="text"> </div> -->
+				  <div class="field">
+					<div class="label_field"> <label for="inputComment">Comments</label>
+					</div>
+					<textarea name="comments"></textarea> 
+				  </div>
+				  <button type="submit" class="btn">Send</button> </form>
+			  </div>
+            </div>
+            <hr>
+			<div class="row copyright">
+				<div class="span5">
+					<h3>Follow Us!</h3>
+					<a href="https://www.facebook.com/pages/Lawfully/593180480707639" class="social fb">
+					<i class="i_facebook"></i> </a> <a href="https://twitter.com/lawful_ly"	class="social tw"> 
+					<i class="i_twitter"></i> </a> <a href="http://www.linkedin.com/company/lawful-ly"	class="social in"> 
+					<i class="i.in"></i> </a> 
+				</div>
+				<div class="span2 offset5 copy">
+				<p>Copyright 2013 - Lawful.ly</p>
+				</div>
+			</div>
+        </div>
+    </div>
+{% endblock footer %}

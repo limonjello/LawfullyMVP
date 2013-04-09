@@ -1,0 +1,30 @@
+{% extends 'base_headonly.html' %}
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css">
+{% endblock %}
+
+{% block main %}
+    <div id="box_sign">
+        <div class="container">
+            <div class="span12 box_wrapper">
+                <div class="span12 box">
+                    <div>
+                        <div class="head">
+                            <h4>Create your account</h4>
+                        </div>
+                        <div class="form">
+                            <form>
+                                <input type="text" placeholder="Email"/>
+                                <input type="text" placeholder="Password"/>
+                                <input type="text" placeholder="Confirm Password"/>
+                                <input type="submit" class="btn" value="Sign up"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p class="already">Already have an account? 
+                    <a href="signin.html">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

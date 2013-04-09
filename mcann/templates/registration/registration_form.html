@@ -1,0 +1,41 @@
+{% extends "base_headonly.html" %}
+{% load url from future %}
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/signup.css">
+{% endblock %}
+{% block main %}
+    <div id="box_sign">
+        <div class="container">
+            <div class="span12 box_wrapper">
+                <div class="span12 box">
+                    <div>
+                        <div class="head">
+                            <h4>Create your account</h4>
+                        </div>
+                        <div class="form">
+                            <form method="post" action="{% url "registration_register" %}">
+                                {% csrf_token %}
+                                {{ form.non_field_errors }}
+                                {% for field in form %}
+                                    <div class="fieldWrapper">
+                                        {{ field.errors }}
+                                        {{ field }}
+                                    </div>
+                                {% endfor %}
+                                <input type="submit" class="btn" value="Sign up">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p class="already">Already have an account?
+                    <a href="{% url "auth_login" %}">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        $('#id_email').attr("placeholder", "Email");
+        $('#id_password1').attr("placeholder", "Password");
+        $('#id_password2').attr("placeholder", "Confirm Password");
+        $('#id_your_name').hide();
+    </script>
+{% endblock main %}

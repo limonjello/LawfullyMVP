@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/external-pages.css">
+{% endblock %}
+{% block main %}
+    <!-- features -->
+    <div id="features" class="features_page">
+        <div class="container">
+            <div class="features1">
+                <!-- header -->
+                <h2 class="section_header">
+                    <hr class="left visible-desktop">
+                    <span>What is Lawful.ly?</span>
+                    <hr class="right visible-desktop">
+                </h2>
+
+                <!-- <div class="row">
+                    <div class="span12">
+                        <h3 class="intro">
+                            Whether you need to create a brand from scratch, including marketing materials
+                            and a beautiful and functional website or whether you are looking for a design
+                            refresh pleased with the results.
+                        </h3>
+                    </div>
+                </div> -->
+
+                <!-- feature list -->
+                <div class="row">
+                    <div class="span4 feature">
+                        <img src="{{ STATIC_URL }}img/feature1.jpg" alt="feature1" class="thumb" />
+                        <h3> Your source for plain language, annotated standard legal
+						documents  </h3>
+						<p class="description"> When you have a basic question or legal
+						  need, you don't want to read a legal treatise or even a legal blog
+						  if you don't absolutely have to.  Well, neither do we. 
+						  By using annotations, we believe that the community can provide
+						  quick explanations of key terms and overview of the key issues
+						  with any document, statute, case, etc.  </p>
+                    </div>
+                    <div class="span4 feature">
+                        <img src="{{ STATIC_URL }}img/feature2.jpg" alt="feature2" class="thumb" />
+                        <h3> An open community for sharing legal information </h3>
+						<p class="description"> We hope that you will give as much as you
+						  take from Lawful.ly.  We believe that it's not only lawyers
+						  who have valuable information to share about legal documents and
+						  terms.  In fact, those who have been involved in the legal
+						  transactions before may have even better insights or be able to
+						  better explain the "real world" meanings of particular legal terms
+						  or issues.  While we we intend this to be a community with
+						  plenty of lawyers, we don't believe the law belongs exclusively to
+						  the lawyers.</p>
+                    </div>
+                    <div class="span4 feature">
+                        <img src="{{ STATIC_URL }}img/feature3.jpg" alt="feature3" class="thumb" />
+                        <h3> Your source for legal <em> information</em>, but not legal <em>advice</em>.</h3>
+						<p class="description"> We hate to get all "lawyerly" here, but we
+						  do want to be clear that Lawful.ly's goal is to empower you with
+						  information about the law, not provide you with tailored legal
+						  advice.  Your specific issues may still require the services
+						  of a qualified attorney.  However, by providing you with
+						  information about the law, we hope to make your interactions with
+						  your attorney more efficient (read: cheaper).</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="features2"> -->
+                <!-- features 2 -->
+                <!-- <h2 class="section_header">
+                    <hr class="left visible-desktop">
+                    <span>What is Lawful.ly?</span>
+                    <hr class="right visible-desktop">
+                </h2> --> 
+
+                <!-- <div class="row">
+                    <div class="span12">
+                        <h3 class="intro">
+                            Whether you need to create a brand from scratch, including marketing materials
+                            and a beautiful and functional website or whether you are looking for a design
+                            refresh pleased with the results.
+                        </h3>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row">
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="cloud"></i></div>
+                        <h4> Your source for plain language, annotated standard legal
+						documents  </h4>
+						<p class="description"> When you have a basic question or legal
+						  need, you don't want to read a legal treatise or even a legal blog
+						  if you don't absolutely have to.  Well, neither do we. 
+						  By using annotations, we believe that the community can provide
+						  quick explanations of key terms and overview of the key issues
+						  with any document, statute, case, etc.
+                        </p>
+                    </div>
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="tools"></i></div>
+                        <h4> An open community for sharing legal information </h4>
+						<p class="description"> We hope that you will give as much as you
+						  take from Lawful.ly.  We believe that it's not only lawyers
+						  who have valuable information to share about legal documents and
+						  terms.  In fact, those who have been involved in the legal
+						  transactions before may have even better insights or be able to
+						  better explain the "real world" meanings of particular legal terms
+						  or issues.  While we we intend this to be a community with
+						  plenty of lawyers, we don't believe the law belongs exclusively to
+						  the lawyers.
+                        </p>
+                    </div>
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="graph"></i></div>
+                        <h4> Your source for legal <em> information</em>, but not legal <em>advice</em>.</h4>
+						<p class="description"> We hate to get all "lawyerly" here, but we
+						  do want to be clear that Lawful.ly's goal is to empower you with
+						  information about the law, not provide you with tailored legal
+						  advice.  Your specific issues may still require the services
+						  of a qualified attorney.  However, by providing you with
+						  information about the law, we hope to make your interactions with
+						  your attorney more efficient (read: cheaper).
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="mobile"></i></div>
+                        <h4>Many desktop publishing editor these available</h4>
+                        <p>
+                            You can't do better design with a computer, but you can speed up your work
+                            enormously.
+                        </p>
+                    </div>
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="lab"></i></div>
+                        <h4>Many desktop publishing editor these available</h4>
+                        <p>
+                            You can't do better design with a computer, but you can speed up your work
+                            enormously.
+                        </p>
+                    </div>
+                    <div class="span4 feature2">
+                        <div class="icon">
+                            <i class="secure"></i></div>
+                        <h4>Many desktop publishing editor these available</h4>
+                        <p>
+                            You can't do better design with a computer, but you can speed up your work
+                            enormously.
+                        </p>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+        </div>
+    </div>
+{% endblock %}

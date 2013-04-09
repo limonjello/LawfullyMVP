@@ -1,0 +1,9 @@
+Here is your Lawful.ly activation key: {{ activation_key }}
+
+Please use this link to activate your Lawful.ly account:
+
+http://ec2-50-17-97-240.compute-1.amazonaws.com/mcann/accounts/activate/{{ activation_key }}/
+
+After activation you can login to Lawful.ly at:
+
+http://ec2-50-17-97-240.compute-1.amazonaws.com/mcann/accounts/login/
